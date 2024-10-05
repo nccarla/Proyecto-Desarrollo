@@ -263,3 +263,232 @@ button:hover {
 .evento p {
     color: black;
 }
+
+/*-------------------------------------------------------------Galeria---------------------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
+
+*{
+    font-family: 'Didact Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to right, #004D98, #A50044);
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3A3A3A;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 20px 0;
+}
+
+#contenido {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.plan {
+    width: 26.7%; 
+    padding: 2%;
+    background-color: white;
+    color: #000;
+    margin: 30px 1.5%;
+    border: solid 3px black;
+    border-radius: 10px;
+    float: left;
+    text-align: justify;
+}
+
+.plan img{
+    width: 100%;
+    height: auto;
+    border: solid 3px black;
+}
+
+#contenido div:nth-child(3n+1){
+    margin-left: 0px;
+}
+
+#contenido div:nth-child(3n){
+    margin-right: 0px;
+}
+
+.plan h2 {
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.plan p {
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3A3A3A;
+    margin-bottom: 0;
+}
+
+/*-------------------------------------------------------------------calendario-----------------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #004D98, #A50044);
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background-color: #3A3A3A;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: #FFF;
+}
+
+#calendario {
+    margin: 40px auto;
+    width: 80%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: #444;
+}
+
+thead th {
+    background-color: #004D98;
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #DDD;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #acacac;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3A3A3A;
+    margin-bottom: 0;
+}
+
+/*---------------------------------------------------------------tabla de posiciones-------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #004D98, #A50044);
+    color: #FFFFFF;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3A3A3A;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+section {
+    margin: 20px auto;
+    width: 80%;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table thead {
+    background-color: #212121;
+}
+
+table thead th {
+    padding: 10px;
+    border: 1px solid #424242;
+}
+
+table tbody td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #424242;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #333333;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #2C2C2C;
+}
+
+tbody tr:hover {
+    background-color: #acacac;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3A3A3A;
+    margin-bottom: 0;
+}
+
+/*------------------------------------------------------
