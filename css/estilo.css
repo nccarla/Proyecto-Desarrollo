@@ -1,13 +1,9 @@
-*{
+body{
+    background-color: #080E1F;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-body{
-    margin: 0px;
-    background-color: #080E1F;
-    color: white;
 }
 
 h1{
@@ -16,56 +12,49 @@ h1{
     color: #FDC52C;
 }
 
-header{
-    background-color: #181733;
-    padding: 10px 0;
-    color: #FDC52C;
-    width: 100%;
+header {
+    background-color: #0E1B39; /* Azul oscuro del FC Barcelona */
+    color: #ffffff;
+    padding: 15px 0;
 }
 
-#head{
+header .envoltorio {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
-    max-width: 1300px;
+    align-items: center;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-#header{
-    display: flex;
-    flex-wrap: wrap;
+.escudo img {
+    height: 42px;
 }
 
-header section{
-    flex: 1;
-}
-.escudo img{
-    height: 100px;
-}
-header nav{
-    float: right;
-    height: auto;
-    width: 100%;
-}
-nav ul{
-    float: right;
+nav ul {
     list-style: none;
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
+    gap: 15px;
 }
 
+nav ul li {
+    display: inline;
+}
 
-nav ul li a{
+nav ul li a {
+    color: #ffffff;
     text-decoration: none;
-    color: #FDC52C;
-    padding: 0% 1em;
-    display: block;
-    height: 100%;
-    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
+
+nav ul li a:hover,
+nav ul li.activo a {
+    background-color: #A50044; /* Granate del FC Barcelona */
+}
+
 
 
 footer {

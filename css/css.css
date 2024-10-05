@@ -219,7 +219,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
-.historia .contenido .envoltorio section{
+.historia .contenido .envoltorio .introduccion{
     padding: 30px;
     background-color: #f4f4f9;
     margin: 30px;
@@ -491,4 +491,102 @@ footer {
     margin-bottom: 0;
 }
 
-/*------------------------------------------------------
+/*------------------------------------------------------Acerca de y plantila------------------------------------------------------*/
+
+body{
+    background-color: #080E1F;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#info{
+    width: 80%;
+    margin: 0px auto;
+    min-width: 650px;
+    max-width: 960px;
+    clear: left;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nosotros {
+    width: 30%;
+    background-color: #181733;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.nosotros img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.nosotros h1 {
+    font-size: 1.5em;
+    color: #FDC52C;
+}
+
+section h2{
+    color: #FDC52C;
+    margin-top: 20px;
+}
+
+.caja{
+    background-color: #181733;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 40px);
+    float: left;
+    text-align: left;
+    color: white;
+}
+
+.caja img{
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.texto{
+    padding: 10px;
+}
+
+.texto h2{
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #FDC52C;
+    margin-top: 5px;
+}
+
+.texto h3{
+    color: white;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.numero{
+    display: inline-block;
+    background-color: #181733;
+    color: #FDC52C;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.texto p{
+    font-size: 0.9em;
+    margin: 5px 0;
+    color: white;
+}
