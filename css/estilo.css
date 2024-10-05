@@ -13,7 +13,7 @@ h1{
 }
 
 header {
-    background-color: #0E1B39; /* Azul oscuro del FC Barcelona */
+    background-color: #181733; 
     color: #ffffff;
     padding: 15px 0;
 }
@@ -28,7 +28,7 @@ header .envoltorio {
 }
 
 .escudo img {
-    height: 42px;
+    height: 100px;
 }
 
 nav ul {
