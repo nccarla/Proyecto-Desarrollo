@@ -491,4 +491,12 @@ footer {
     margin-bottom: 0;
 }
 
-/*------------------------------------------------------
+/*------------------------------------------------------Acerca de y plantila------------------------------------------------------*/
+
+body{
+    background-color: #080E1F;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
