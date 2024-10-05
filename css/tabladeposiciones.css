@@ -1,0 +1,74 @@
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #004D98, #A50044);
+    color: #FFFFFF;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3A3A3A;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+section {
+    margin: 20px auto;
+    width: 80%;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table thead {
+    background-color: #212121;
+}
+
+table thead th {
+    padding: 10px;
+    border: 1px solid #424242;
+}
+
+table tbody td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #424242;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #333333;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #2C2C2C;
+}
+
+tbody tr:hover {
+    background-color: #acacac;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3A3A3A;
+    margin-bottom: 0;
+}
