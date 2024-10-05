@@ -12,7 +12,7 @@ body{
 }
 
 header {
-    background-color: #0E1B39; /* Azul oscuro del FC Barcelona */
+    background-color: #0E1B39; 
     color: #ffffff;
     padding: 15px 0;
 }
@@ -51,7 +51,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li.activo a {
-    background-color: #A50044; /* Granate del FC Barcelona */
+    background-color: #A50044; 
 }
 
 h1 {

@@ -20,7 +20,7 @@ footer p {
 
 /* Encabezado */
 header {
-    background-color: #0E1B39; /* Azul oscuro del FC Barcelona */
+    background-color: #0E1B39; 
     color: #ffffff;
     padding: 15px 0;
 }
@@ -59,7 +59,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li.activo a {
-    background-color: #A50044; /* Granate del FC Barcelona */
+    background-color: #A50044;
 }
 
 /* Sección superior */
@@ -111,7 +111,7 @@ nav ul li.activo a {
 }
 
 h3 {
-    color: #A50044; /* Color granate */
+    color: #A50044; 
     font-size: 1.4rem;
     margin: 15px 0;
 }
@@ -128,7 +128,7 @@ h3 {
 }
 
 .botoncito:hover {
-    background-color: #A50044; /* Color granate */
+    background-color: #A50044; 
 }
 
 /* Testimonios */
