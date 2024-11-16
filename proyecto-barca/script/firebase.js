@@ -23,7 +23,7 @@ export async function registerUser(username, email, password, role) {
     await setDoc(doc(db, "users", user.uid), {
       username,
       email,
-      role,
+      role, 
     });
 
     console.log("Usuario registrado:", user);
@@ -41,7 +41,7 @@ export async function loginUser(email, password) {
 
     const userDoc = await getDoc(doc(db, "users", user.uid));
     if (userDoc.exists()) {
-      return { ...userDoc.data(), uid: user.uid };
+      return { ...userDoc.data(), uid: user.uid }; 
     } else {
       throw new Error("Usuario no encontrado en Firestore.");
     }
