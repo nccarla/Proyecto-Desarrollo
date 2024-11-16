@@ -10,12 +10,11 @@
     <header>
         <div class="envoltorio">
             <div class="logo">
-                <a href="index.html"><img src="img/584a9b3bb080d7616d298777.png" title="FC Barcelona" height="42px" /></a>
+                <a href="../indice.html"><img src="img/584a9b3bb080d7616d298777.png" title="FC Barcelona" height="42px" /></a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="plantilla.html">plantilla</a></li>
+                    <li><a href="plantilla.html">Plantilla</a></li>
                     <li><a href="noticias.html">Noticias</a></li>
                     <li><a href="calendario.html">Calendario</a></li>
                     <li><a href="tabladeposiciones.html">Tabla de posiciones</a></li>
@@ -23,12 +22,14 @@
                     <li><a href="galeria.html">Imagenes</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                     <li><a href="acercade.html">Acerca De</a></li>
-                    
+                    <li><a href="inicio_sesion.html">Iniciar Sesion</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <section id="calendario">
+        <h1>Calendario de Partidos</h1>
+        <button id="btnAgregarPartido" class="btn">Agregar Partido</button>
         <table>
             <thead>
                 <tr>
@@ -39,7 +40,7 @@
                     <th>Hora</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="calendario-body">
                 <tr>
                     <td>6 Octubre 2024</td>
                     <td>Alavés</td>
@@ -116,5 +117,27 @@
     <footer>
         <p>© 2024 FC Barcelona - Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Modal para agregar/editar partidos -->
+    <div id="formModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2 id="modalTitle">Agregar Partido</h2>
+            <form id="formPartido">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+                <label for="rival">Rival:</label>
+                <input type="text" id="rival" required>
+                <label for="competicion">Competición:</label>
+                <input type="text" id="competicion" required>
+                <label for="estadio">Estadio:</label>
+                <input type="text" id="estadio" required>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+                <button type="submit" class="btn">Guardar</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/calendario.js"></script>
 </body>
 </html>
