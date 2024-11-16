@@ -1,9 +1,7 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-import { getFirestore, doc, setDoc, getDoc, collection } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
-// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBfQ163tLMsNjFZsOClKENEwzw3Xl6BRNU",
   authDomain: "proyect-barca.firebaseapp.com",
@@ -13,50 +11,38 @@ const firebaseConfig = {
   appId: "1:751645732122:web:f5ff8c8b0f01bbaffa90a3"
 };
 
-// Initialize Firebase
+// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-export {auth, db};
+// Función para registrar usuario
+export const registerUser = async (email, password, username, role) => {
+  const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+  const user = userCredential.user;
 
-export async function registerUser(username, email, password, rol) {
-  try {
-    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-    const user = userCredential.user;
+  // Guardar datos del usuario en Firestore
+  await setDoc(doc(db, "users", user.uid), {
+    email,
+    username,
+    role,
+  });
 
-    // Guardar información en la colección `users`
-    await setDoc(doc(db, "users", user.uid), {
-      email,
-      username,
-      rol, // Guardar el rol
-      password, // Solo guarda contraseñas en Firestore para pruebas locales
-    });
+  return { email, username, role };
+};
 
-    console.log("Usuario registrado:", user);
-    return true;
-  } catch (error) {
-    console.error("Error al registrar usuario:", error.message);
-    return false;
-  }
-}
+// Función para iniciar sesión
+export const loginUser = async (email, password) => {
+  const userCredential = await signInWithEmailAndPassword(auth, email, password);
+  const user = userCredential.user;
 
-
-export async function loginUser(email, password) {
-  try {
-    const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    const user = userCredential.user;
-
-    // Obtener datos del usuario desde Firestore
-    const userDoc = await getDoc(doc(db, "users", user.uid));
-    if (userDoc.exists()) {
-      return { ...userDoc.data(), uid: user.uid };
-    } else {
-      throw new Error("Usuario no encontrado en Firestore.");
-    }
-  } catch (error) {
-    console.error("Error al iniciar sesión:", error.message);
+  // Obtener datos adicionales del usuario de Firestore
+  const userDoc = await getDoc(doc(db, "users", user.uid));
+  if (userDoc.exists()) {
+    return userDoc.data();
+  } else {
     return null;
   }
-}
+};
 
+export { auth, db };
