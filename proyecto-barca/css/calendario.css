@@ -1,14 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Didact Gothic', sans-serif;
-}
-
 body {
     background: linear-gradient(to right, #004D98, #A50044);
     color: #ffffff;
+    font-family: 'Didact Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
@@ -39,10 +34,6 @@ nav ul {
     gap: 15px;
 }
 
-nav ul li {
-    display: inline;
-}
-
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
@@ -50,18 +41,11 @@ nav ul li a {
     border-radius: 5px;
 }
 
-nav ul li a:hover,
-nav ul li.activo a {
+nav ul li a:hover {
     background-color: #A50044; 
 }
 
-h1 {
-    margin: 20px 0;
-    font-size: 2.5em;
-    color: #FFF;
-}
-
-#calendario {
+main {
     margin: 40px auto;
     width: 80%;
 }
@@ -71,13 +55,13 @@ table {
     border-collapse: collapse;
     background-color: white;
     color: #444;
+    margin-top: 20px;
 }
 
 thead th {
     background-color: #004D98;
     color: white;
     padding: 10px;
-    font-size: 1.2em;
 }
 
 tbody td {
@@ -97,10 +81,49 @@ tbody tr:hover {
 footer {
     background-color: #A50044;
     color: white;
-    text-align: center;
     padding: 10px 0;
-    position: static;
-    margin-bottom: 0;
-    bottom: 0;
+    text-align: center;
+}
+
+.btn {
+    background-color: #A50044;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    background-color: #FDC52C;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #000;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: left;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
