@@ -8,16 +8,15 @@ registerForm.addEventListener("submit", async (event) => {
 
   const email = document.getElementById("registerEmail").value;
   const password = document.getElementById("registerPassword").value;
-  const firstName = document.getElementById("firstName").value;
-  const lastName = document.getElementById("lastName").value;
+  const username = document.getElementById("registerUsername").value;
+  const role = document.getElementById("registerRole").value;
 
   try {
-    const success = await registerUser(firstName, lastName, email, password);
+    const success = await registerUser(username, email, password, role);
     if (success) {
       alert("Registro exitoso. Puedes iniciar sesión ahora.");
       registerForm.reset();
-      const loginTab = document.getElementById("login-tab");
-      loginTab.click();
+      document.getElementById("login-tab").click();
     } else {
       alert("Hubo un error durante el registro. Intenta de nuevo.");
     }
@@ -38,7 +37,7 @@ loginForm.addEventListener("submit", async (event) => {
     if (userData) {
       alert(`Bienvenido, ${userData.username || "Usuario"}`);
       localStorage.setItem("user", JSON.stringify(userData));
-      window.location.href = "dashboard.html";
+      window.location.href = userData.role === "admin" ? "admin_dashboard.html" : "user_dashboard.html";
     } else {
       alert("Credenciales incorrectas. Verifica tu correo y contraseña.");
     }
@@ -48,11 +47,3 @@ loginForm.addEventListener("submit", async (event) => {
   }
 });
 
-window.addEventListener("load", () => {
-  const storedUser = localStorage.getItem("user");
-  if (storedUser) {
-    const user = JSON.parse(storedUser);
-    alert(`Bienvenido de nuevo, ${user.username || "Usuario"}`);
-    window.location.href = "dashboard.html"; 
-  }
-});
