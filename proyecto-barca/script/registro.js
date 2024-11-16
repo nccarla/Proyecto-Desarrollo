@@ -4,7 +4,7 @@ import { signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth
 const registerForm = document.getElementById("registerForm");
 const loginForm = document.getElementById("loginForm");
 
-// Función para registrar usuarios
+
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -50,7 +50,7 @@ loginForm.addEventListener("submit", async (event) => {
   }
 });
 
-// Función para cerrar sesión
+
 const logout = async () => {
   try {
     await signOut(auth);
@@ -63,7 +63,7 @@ const logout = async () => {
   }
 };
 
-// Vincular botón de logout
+
 const logoutBtn = document.getElementById("logoutBtn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", logout);
