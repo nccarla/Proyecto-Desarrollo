@@ -51,7 +51,7 @@ loginForm.addEventListener("submit", async (event) => {
   }
 });
 
-// Función para cerrar sesión
+
 const logout = async () => {
   try {
     await signOut(auth);
@@ -64,7 +64,7 @@ const logout = async () => {
   }
 };
 
-// Vincular botón de logout
+
 const logoutBtn = document.getElementById("logoutBtn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", logout);
