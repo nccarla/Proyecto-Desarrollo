@@ -11,19 +11,17 @@ const firebaseConfig = {
   appId: "1:751645732122:web:f5ff8c8b0f01bbaffa90a3"
 };
 
-// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// Función para registrar usuario
 export const registerUser = async (email, password, username, role) => {
   const userCredential = await createUserWithEmailAndPassword(auth, email, password);
   const user = userCredential.user;
 
-  // Guardar datos del usuario en Firestore
   await setDoc(doc(db, "users", user.uid), {
     email,
+    password,
     username,
     role,
   });
@@ -31,12 +29,9 @@ export const registerUser = async (email, password, username, role) => {
   return { email, username, role };
 };
 
-// Función para iniciar sesión
 export const loginUser = async (email, password) => {
   const userCredential = await signInWithEmailAndPassword(auth, email, password);
   const user = userCredential.user;
-
-  // Obtener datos adicionales del usuario de Firestore
   const userDoc = await getDoc(doc(db, "users", user.uid));
   if (userDoc.exists()) {
     return userDoc.data();
