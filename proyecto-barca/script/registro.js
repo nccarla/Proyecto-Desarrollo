@@ -35,7 +35,7 @@ loginForm.addEventListener("submit", async (event) => {
     if (userData) {
       alert(`Bienvenido, ${userData.username || "Usuario"}`);
       localStorage.setItem("user", JSON.stringify(userData));
-      window.location.href = "../index.html";
+      window.location.href = "index.html";
     } else {
       alert("Credenciales incorrectas. Verifica tu correo y contraseña.");
     }
@@ -43,6 +43,7 @@ loginForm.addEventListener("submit", async (event) => {
     console.error("Error en el inicio de sesión:", error);
     alert("Error en el inicio de sesión: " + error.message);
   }
+  
 });
 
 const logout = async () => {
