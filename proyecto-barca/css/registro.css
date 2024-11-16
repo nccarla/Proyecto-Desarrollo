@@ -1,19 +1,17 @@
-/* Colores inspirados en el FC Barcelona */
 :root {
-    --barca-blue: #004d98; /* Azul Barca */
-    --barca-red: #a50044;  /* Rojo Barca */
-    --barca-hover: #013777; /* Azul más oscuro para hover */
+    --barca-blue: #004d98; 
+    --barca-red: #a50044; 
+    --barca-hover: #013777; 
   }
-  
-  /* Estilo para los botones de navegación */
+
   .nav-tabs {
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
+    justify-content: center; 
     margin-bottom: 20px;
   }
   
   .nav-tabs .nav-link {
-    color: var(--barca-blue); /* Azul Barca */
+    color: var(--barca-blue); 
     background-color: transparent;
     border: none;
     font-weight: bold;
@@ -23,24 +21,19 @@
     transition: background-color 0.2s, color 0.2s;
   }
   
-  /* Botón activo */
   .nav-tabs .nav-link.active {
     color: #fff;
-    background-color: var(--barca-red); /* Rojo Barca */
+    background-color: var(--barca-red);
   }
-  
-  /* Efecto hover */
+
   .nav-tabs .nav-link:hover {
     color: #fff;
-    background-color: var(--barca-hover); /* Azul más oscuro */
+    background-color: var(--barca-hover); 
   }
-  
-  /* Último botón sin margen derecho */
   .nav-tabs .nav-link:last-child {
     margin-right: 0;
   }
   
-  /* Estilo del contenedor de los formularios */
   .form-container {
     padding: 20px;
     border: 1px solid #ddd;
@@ -48,20 +41,17 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  /* Encabezado del formulario */
   h3 {
     margin-top: 15px;
     text-align: center;
     color: var(--barca-blue);
   }
   
-  /* Estilo general de los inputs */
   .form-control {
     margin-bottom: 15px;
     border-radius: 5px;
   }
   
-  /* Botones del formulario */
   .btn {
     border-radius: 5px;
     background-color: var(--barca-blue);
@@ -72,7 +62,6 @@
     background-color: var(--barca-hover);
   }
   
-  /* Estilo para centrar el formulario */
   .container {
     max-width: 500px;
     margin: auto;
