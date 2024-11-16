@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posiciones - FC Barcelona</title>
     <link rel="stylesheet" href="css/tabladeposiciones.css">
+    <script src="js/tabladeposiciones.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,22 +16,22 @@
             <nav>
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="plantilla.html">plantilla</a></li>
+                    <li><a href="plantilla.html">Plantilla</a></li>
                     <li><a href="noticias.html">Noticias</a></li>
                     <li><a href="calendario.html">Calendario</a></li>
                     <li><a href="tabladeposiciones.html">Tabla de posiciones</a></li>
                     <li><a href="historia.html">Historia</a></li>
-                    <li><a href="galeria.html">Imagenes</a></li>
+                    <li><a href="galeria.html">Imágenes</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                     <li><a href="acercade.html">Acerca De</a></li>
-                    
                 </ul>
             </nav>
         </div>
     </header>
+
     <section id="laliga">
         <h2 style="text-align: center;">LaLiga - Temporada 2024-25</h2>
-        <table>
+        <table id="tabla-laliga">
             <thead>
                 <tr>
                     <th>#</th>
@@ -42,193 +43,13 @@
                     <th>Puntos</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Barcelona</td>
-                    <td>8</td>
-                    <td>7</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>21</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Real Madrid</td>
-                    <td>8</td>
-                    <td>5</td>
-                    <td>3</td>
-                    <td>0</td>
-                    <td>18</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Villarreal</td>
-                    <td>8</td>
-                    <td>5</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>17</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Atletico Madrid</td>
-                    <td>8</td>
-                    <td>4</td>
-                    <td>4</td>
-                    <td>0</td>
-                    <td>16</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Athletic Bilbao</td>
-                    <td>8</td>
-                    <td>4</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>14</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Mallorca</td>
-                    <td>8</td>
-                    <td>4</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>14</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Osasuna</td>
-                    <td>8</td>
-                    <td>4</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>14</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Betis</td>
-                    <td>8</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Rayo Vallecano</td>
-                    <td>8</td>
-                    <td>2</td>
-                    <td>4</td>
-                    <td>2</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Celta de Vigo</td>
-                    <td>8</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td>4</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Alaves</td>
-                    <td>8</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td>4</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Girona</td>
-                    <td>8</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>9</td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>Sevilla</td>
-                    <td>8</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>9</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>Real Sociedad</td>
-                    <td>8</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>4</td>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>Leganes</td>
-                    <td>9</td>
-                    <td>1</td>
-                    <td>5</td>
-                    <td>3</td>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <td>16</td>
-                    <td>Getafe</td>
-                    <td>8</td>
-                    <td>1</td>
-                    <td>4</td>
-                    <td>3</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td>17</td>
-                    <td>Espanyol</td>
-                    <td>8</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>5</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>Valencia</td>
-                    <td>9</td>
-                    <td>1</td>
-                    <td>3</td>
-                    <td>5</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>19</td>
-                    <td>Valladolid</td>
-                    <td>8</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>20</td>
-                    <td>UD Las Palmas</td>
-                    <td>8</td>
-                    <td>0</td>
-                    <td>3</td>
-                    <td>5</td>
-                    <td>3</td>
-                </tr>
-            </tbody>
+            <tbody></tbody>
         </table>
     </section>
+
     <section id="champions-league">
         <h2 style="text-align: center;">UEFA Champions League - Temporada 2024-25</h2>
-        <table>
+        <table id="tabla-champions">
             <thead>
                 <tr>
                     <th>#</th>
@@ -240,190 +61,10 @@
                     <th>Puntos</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Dortmund</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Brest</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Benfica</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Leverkunsen</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Liverpool</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Aston Villa</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Juventus</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Manchester City</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Inter de Milan</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Sparta Praha</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Atalanta</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Sporting CP</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>Arsenal</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>Monaco</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>Bayern Munchen</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>16</td>
-                    <td>Barcelona</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>17</td>
-                    <td>Real Madrid</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>Lille</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>3</td>
-                </tr>
-                <tr></tr>
-                    <td>19</td>
-                    <td>PSG</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>20</td>
-                    <td>Celtic</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>3</td>
-                </tr>
-            </tbody>
+            <tbody></tbody>
         </table>
     </section>
+
     <footer>
         <p>© 2024 FC Barcelona - Todos los derechos reservados.</p>
     </footer>
