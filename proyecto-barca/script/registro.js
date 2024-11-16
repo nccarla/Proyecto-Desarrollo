@@ -1,12 +1,10 @@
 import { auth, registerUser, loginUser } from "./firebase.js";
 import { signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
-// Elementos del formulario
 const registerForm = document.getElementById("registerForm");
 const loginForm = document.getElementById("loginForm");
 const logoutBtn = document.getElementById("logoutBtn");
 
-// Evento para el registro de usuario
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -19,7 +17,6 @@ registerForm.addEventListener("submit", async (event) => {
     const userData = await registerUser(email, password, username, role);
     if (userData) {
       alert("Usuario registrado exitosamente");
-      window.location.href = "login.html"; // Redirigir al login después del registro
     }
   } catch (error) {
     console.error("Error en el registro:", error);
@@ -27,7 +24,6 @@ registerForm.addEventListener("submit", async (event) => {
   }
 });
 
-// Evento para el inicio de sesión
 loginForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -39,7 +35,7 @@ loginForm.addEventListener("submit", async (event) => {
     if (userData) {
       alert(`Bienvenido, ${userData.username || "Usuario"}`);
       localStorage.setItem("user", JSON.stringify(userData));
-      window.location.href = userData.role === "admin" ? "admin_dashboard.html" : "user_dashboard.html";
+      window.location.href = "index.html";
     } else {
       alert("Credenciales incorrectas. Verifica tu correo y contraseña.");
     }
@@ -49,7 +45,6 @@ loginForm.addEventListener("submit", async (event) => {
   }
 });
 
-// Evento para cerrar sesión
 const logout = async () => {
   try {
     await signOut(auth);
